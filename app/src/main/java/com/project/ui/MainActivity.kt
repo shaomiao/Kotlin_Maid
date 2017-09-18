@@ -6,6 +6,7 @@ import android.view.Gravity
 import android.widget.Button
 import android.widget.EditText
 import com.project.R
+import kotlinx.android.synthetic.main.activity_main2.*
 import org.jetbrains.anko.*
 import org.jetbrains.anko.sdk25.coroutines.onClick
 
@@ -13,33 +14,34 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        verticalLayout {
-//            padding = dip(30)
-            editText {
-                hint = "Name"
-                textSize = 24f
-
-            }
-            editText {
-                hint = "Password"
-                textSize = 24f
-            }
-            button("Login") {
-                textSize = 26f
-            }
-        }
-
-
-        linearLayout {
-            button("Login") {
-                textSize = 26f
-            }.lparams(width = wrapContent) {
-                horizontalMargin = dip(5)
-                topMargin = dip(10)
-            }
-        }
+//        verticalLayout {
+////            padding = dip(30)
+//            editText {
+//                hint = "Name"
+//                textSize = 24f
+//
+//            }
+//            editText {
+//                hint = "Password"
+//                textSize = 24f
+//            }
+//            button("Login") {
+//                textSize = 26f
+//            }
+//        }
+//
+//
+//        linearLayout {
+//            button("Login") {
+//                textSize = 26f
+//            }.lparams(width = wrapContent) {
+//                horizontalMargin = dip(5)
+//                topMargin = dip(10)
+//            }
+//        }
 //        MainActivityUi().setContentView(this)
-//        setContentView(R.layout.activity_main2)
+        setContentView(R.layout.activity_main2)
+        message.text = "Hello Kotlin!"
     }
 
     fun tryLogin(ui: AnkoContext<MainActivity>, name: CharSequence?, password: CharSequence?) {
